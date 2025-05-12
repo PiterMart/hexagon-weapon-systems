@@ -7,9 +7,26 @@ import ScrollProgressRuler from "@/components/ScrollProgress";
 import Portfolio from "@/components/Portfolio";
 import WorldClock from "@/components/Clock";
 import About from "@/components/About";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [contentLoaded, setContentLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simulate initial content loading
+    const timer = setTimeout(() => {
+      setContentLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
   useEffect(() => {
     console.log(`
                                           :~7???7!:.                                                
@@ -57,6 +74,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} isLoading={!contentLoaded} />}
         <ScrollProgressRuler/>
         <Video/>
         <Hexagon/>
