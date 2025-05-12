@@ -189,7 +189,7 @@ const Hexagon = () => {
           borderRadius: "0px",
           pointerEvents: "none", // Ensure the textbox doesn't interfere with hover
           background: "white", // No background
-          width: "90%",
+          width: "auto",
         }}
       >
         {displayedText}
