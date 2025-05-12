@@ -1,0 +1,202 @@
+.portfolioContainer {
+  padding: 4rem 0;
+  padding-left: 10vw;
+  background-color: #000000;
+  position: relative;
+  font-family: var(--font-primary);
+}
+
+.sectionTitle {
+  text-align: left;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  padding: 0 2rem;
+  text-transform: uppercase;
+}
+
+.carouselWrapper {
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.slide {
+  padding: 0;
+  outline: none !important;
+}
+
+.clientCard {
+  background: #000000;
+  padding: 0;
+  transition: transform 0.3s ease;
+  margin: 0;
+}
+
+.clientCard:hover {
+  transform: translateY(-5px);
+}
+
+.clientTitle {
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  padding: 0 2rem;
+  text-transform: uppercase;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.clientImage {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 2rem 0;
+  text-align: left;
+  padding: 0 2rem;
+}
+
+.characteristicsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0 2rem;
+}
+
+.characteristic {
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+
+.visitButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #ffffff7e;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.visitButton:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* Custom styles for the carousel navigation */
+.carouselWrapper :global(.slick-prev),
+.carouselWrapper :global(.slick-next) {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  mix-blend-mode: difference;
+}
+
+.carouselWrapper :global(.slick-prev) {
+  left: 20px;
+  display: none !important;
+}
+
+.carouselWrapper :global(.slick-next) {
+  right: 20px;
+}
+
+.carouselWrapper :global(.slick-prev:before),
+.carouselWrapper :global(.slick-next:before) {
+  font-size: 40px;
+  color: #ffffff;
+  opacity: 1;
+  content: ">";
+}
+
+.carouselWrapper :global(.slick-dots) {
+  bottom: -40px;
+}
+
+.carouselWrapper :global(.slick-dots li button:before) {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.carouselWrapper :global(.slick-dots li.slick-active button:before) {
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolioContainer {
+    padding: 2rem 0;
+    padding-left: 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .clientTitle {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .imageContainer {
+    aspect-ratio: 16/9;
+  }
+
+  .description {
+    padding: 0 1rem;
+  }
+
+  .characteristicsList {
+    padding: 0 1rem;
+  }
+
+  .buttonContainer {
+    padding: 0 1rem;
+  }
+
+  .carouselWrapper :global(.slick-prev) {
+    left: 10px;
+  }
+
+  .carouselWrapper :global(.slick-next) {
+    right: 10px;
+  }
+
+  .visitButton {
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
+  }
+} 

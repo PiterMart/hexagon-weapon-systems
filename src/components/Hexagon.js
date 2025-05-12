@@ -188,7 +188,8 @@ const Hexagon = () => {
           padding: "10px 20px",
           borderRadius: "0px",
           pointerEvents: "none", // Ensure the textbox doesn't interfere with hover
-          background: "none", // No background
+          background: "white", // No background
+          width: "90%",
         }}
       >
         {displayedText}
