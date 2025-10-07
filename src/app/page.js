@@ -9,7 +9,7 @@ import WorldClock from "@/components/Clock";
 import About from "@/components/About";
 import { useEffect, useState } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
-
+import InteractiveObjectScene from "@/components/InteractiveObjectScene";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [contentLoaded, setContentLoaded] = useState(false);
@@ -75,10 +75,11 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} isLoading={!contentLoaded} />}
+        {/* <InteractiveObjectScene/> */}
         <ScrollProgressRuler/>
         <Video/>
         <Hexagon/>
-        <Portfolio/>
+        {/* <Portfolio/> */}
         {/* <div style={{height: '100vh', background: 'black'}}></div> */}
         <WorldClock/>
         <About/>
