@@ -1,0 +1,209 @@
+.curvedScrollWrapper {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 800px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.curvedScrollContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.textPath {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: scrollText 15s linear infinite;
+}
+
+.char {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: #888888;
+  font-family: 'Courier New', monospace;
+  transform-origin: center center;
+  white-space: nowrap;
+  opacity: 0.54;
+}
+
+/* Position each character in a semicircle arc */
+.char {
+  --angle: calc(var(--char-index) * 5deg - 180deg);
+  --radius: 350px;
+  transform: 
+    rotate(var(--angle)) 
+    translateY(calc(var(--radius) * -1))
+    rotate(90deg);
+}
+
+/* Inner circle - smaller and spinning opposite direction */
+.charInner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: #888888;
+  font-family: 'Courier New', monospace;
+  transform-origin: center center;
+  white-space: nowrap;
+  opacity: 0.42;
+}
+
+.charInner {
+  --angle: calc(var(--char-index) * 8deg - 180deg);
+  --radius: 220px;
+  transform: 
+    rotate(var(--angle)) 
+    translateY(calc(var(--radius) * -1))
+    rotate(90deg);
+}
+
+.textPathInner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: scrollTextReverse 15s linear infinite;
+}
+
+@keyframes scrollTextReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Center text container */
+.centerTextContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  pointer-events: none;
+}
+
+/* Center text with strobo effect */
+.centerText {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: 100;
+  color: #888888;
+  white-space: nowrap;
+  opacity: 0.8;
+  text-align: center;
+  animation: strobo 0.15s step-end infinite;
+  pointer-events: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-width 0.3s ease;
+}
+
+/* Different widths for pyramid/diamond effect - 17 lines */
+.centerText.narrow {
+  max-width: 140px;
+  font-size: 10px;
+}
+
+.centerText.small {
+  max-width: 180px;
+  font-size: 10.5px;
+}
+
+.centerText.medium {
+  max-width: 220px;
+  font-size: 11px;
+}
+
+.centerText.mediumLarge {
+  max-width: 260px;
+  font-size: 11.5px;
+}
+
+.centerText.large {
+  max-width: 300px;
+  font-size: 12px;
+}
+
+.centerText.extraLarge {
+  max-width: 340px;
+  font-size: 12.5px;
+}
+
+.centerText.wide {
+  max-width: 380px;
+  font-size: 13px;
+}
+
+.centerText.wider {
+  max-width: 420px;
+  font-size: 13.5px;
+}
+
+.centerText.widest {
+  max-width: 460px;
+  font-size: 14px;
+}
+
+@keyframes strobo {
+  0%, 50% {
+    opacity: 0.8;
+  }
+  51%, 100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .curvedScrollWrapper {
+    width: 250px;
+    height: 500px;
+  }
+
+  .char {
+    font-size: 16px;
+    --radius: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .curvedScrollWrapper {
+    width: 200px;
+    height: 400px;
+  }
+
+  .char {
+    font-size: 14px;
+    --radius: 180px;
+  }
+}
+
+

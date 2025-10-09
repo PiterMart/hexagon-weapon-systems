@@ -41,6 +41,7 @@
   text-align: left;
   padding: 0 2rem;
   text-transform: uppercase;
+  font-family: var(--font-primary);
 }
 
 .subtitle {

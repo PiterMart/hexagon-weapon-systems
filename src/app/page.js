@@ -10,6 +10,7 @@ import About from "@/components/About";
 import { useEffect, useState } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import InteractiveObjectScene from "@/components/InteractiveObjectScene";
+import CurvedScrollingText from "@/components/CurvedScrollingText";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [contentLoaded, setContentLoaded] = useState(false);
@@ -76,6 +77,7 @@ export default function Home() {
       <main className={styles.main}>
         {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} isLoading={!contentLoaded} />}
         {/* <InteractiveObjectScene/> */}
+        <CurvedScrollingText/>
         <ScrollProgressRuler/>
         <Video/>
         <Hexagon/>
