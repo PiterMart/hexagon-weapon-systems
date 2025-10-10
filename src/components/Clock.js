@@ -6,6 +6,12 @@ import { format } from 'date-fns-tz';
 const timeZones = [
     { label: 'Buenos Aires', zone: 'America/Argentina/Buenos_Aires' },
   { label: 'Berlin', zone: 'Europe/Berlin' },
+  { label: 'London', zone: 'Europe/London' },
+  { label: 'Madrid', zone: 'Europe/Madrid' },
+  { label: 'Paris', zone: 'Europe/Paris' },
+  { label: 'Tokyo', zone: 'Asia/Tokyo' },
+  { label: 'Ukraine', zone: 'Europe/Kiev' },
+  { label: 'Ukraine', zone: 'Europe/Kiev' },
 ];
 
 export default function WorldClock() {

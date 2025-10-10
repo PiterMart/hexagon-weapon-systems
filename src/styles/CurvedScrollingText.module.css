@@ -103,7 +103,7 @@
 /* Center text with strobo effect */
 .centerText {
   font-family: 'Courier New', monospace;
-  font-size: 14px;
+  font-size: 28px;
   font-weight: 100;
   color: #888888;
   white-space: nowrap;
@@ -160,7 +160,7 @@
 
 .centerText.widest {
   max-width: 460px;
-  font-size: 14px;
+  font-size: 22px;
 }
 
 @keyframes strobo {

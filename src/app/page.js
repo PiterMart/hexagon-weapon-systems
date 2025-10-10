@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import InteractiveObjectScene from "@/components/InteractiveObjectScene";
 import CurvedScrollingText from "@/components/CurvedScrollingText";
+import DroneAnimation from "@/components/DroneAnimation";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [contentLoaded, setContentLoaded] = useState(false);
@@ -79,6 +80,7 @@ export default function Home() {
         {/* <InteractiveObjectScene/> */}
         <CurvedScrollingText/>
         <ScrollProgressRuler/>
+        <DroneAnimation/>
         <Video/>
         <Hexagon/>
         {/* <Portfolio/> */}
