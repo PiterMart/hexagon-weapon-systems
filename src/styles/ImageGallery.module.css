@@ -110,7 +110,7 @@
   position: absolute;
   cursor: grab;
   user-select: none;
-  background: #c0c0c0;
+  background: #000000;
   border: 2px outset #c0c0c0;
   pointer-events: auto;
   display: flex;
@@ -160,7 +160,7 @@
 }
 
 .imageWrapper {
-  background: white;
+  background: rgb(0, 0, 0);
   padding: 1px;
 }
 

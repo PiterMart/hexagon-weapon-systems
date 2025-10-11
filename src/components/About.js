@@ -75,7 +75,6 @@ const About = () => {
   const folderMapping = {
     'drones': 'fpv pov',
     'pilots': 'pilot',
-    'swarms': 'swarm',
     'tanks_vs_drones': 'tank',
     'anti_drone_strategies': 'soldiers',
     'nightvision': 'nightvision',
@@ -159,7 +158,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('drones')}
             >
-              We drink from shattered cups to taste the light they could not hold.
+             [{"(·) + (·) + (·)  ∴ "}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- UCAV "S̴p̷e̶c̸t̴r̴e̷-9": A̸t̴t̸a̸c̷k̸ and r̴e̸c̴o̴n̸...a̴i̶s̴s̷a̸n̸c̷e̶ p̴l̷a̸t̴f̸o̵r̴m̸.</motion.li>
@@ -194,7 +193,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('pilots')}
             >
-             Зеир уисперс ар зе растл оф драй боунс, промисинг валор фор зе прайс оф мёрси
+             [{"|Void Sector|  >>  Map  [ >|<X>|< ]"}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Tr̴ai̸ni̷ng: Ce̴rti̸fi̵ed UCAV Op̴er̵ato̵r C̴ou̸rse.</motion.li>
@@ -258,7 +257,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('tanks_vs_drones')}
             >
-              Listen not to the word, but to its sum, for Love and Unity are the same number.
+              Maullidos acartonados en los escombros.
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Ac̸ti̵ve D̵efe̷nse: "A̵eg̵is" a̴uto̷ma̴ted tu̷rre̷t wi̵th f̴rag̸ment̵atio̷n m̴uni̸tio̵ns for̸ dr̸one i̸nte̴rcep̵tion.</motion.li>
@@ -292,7 +291,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('anti_drone_strategies')}
             >
-              S̴o̴l̴d̷i̴e̶r̸s̴ A̸n̶t̸i̷ D̶r̴o̷n̴e̷ S̶t̴r̵a̶t̵e̶g̵i̴e̵s̴
+              [{"∇-·-∇ |=<|>| -/·-/ <|> ||··"}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Ma̶n-P̵ort̴abl̶e: "H̵ELIO̴S II" h̵and̴hel̴d d̴irect̵ed en̸ergy w̸eap̴on (l̷as̵er).</motion.li>
@@ -404,12 +403,6 @@ const About = () => {
               PP5YYYJ?JJY5PP5GGBGGG#&&&&&&&&&&&&&#####BGGGGGGGPG##BGGGPPPPPGPPGB#&#B#&####BBB#&&&###&#&#########BB##&&&&###&####&&&&&&&&&&##BPGB#&##########&&&&&##&&&@&&&&&@&&&&&&&&&&&&&##&###B&#B#&BP5Y5555555YPGB#&############BGPPPPPPPPPPPGGGGGGGGGGGG&#&&&&&&&&&&&&&&@@&&&###&&&&&&&&&&&&&&&&##BBBBBGGGGGBBB####&&&
 
             </motion.p>
-            <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Se̴ns̵or̷s: H̴ype̸rspe̵ctr̸al se̷nso̸rs fo̴r d̸ron̴es t̸o de̸fea̷t ca̸mou̸fla̸ge.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- C̸o̶u̴n̵t̶e̵r̴m̶e̷a̸s̶u̶r̷e̸s̶: D̴e̶v̵e̷l̴o̴p̴m̴e̸n̸t̴ o̵f̸ l̵o̸w̶-̵e̸m̸i̵s̶s̴i̷v̶i̵t̸y̸ c̴o̷a̸t̶i̴n̴g̴s̸ f̵o̴r̶ d̶r̸o̴n̵e̴s̸.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- F̴u̶s̶i̸o̷n̴: "H̶e̶l̴i̸o̵s̵" s̴e̸n̸s̴o̶r̵ f̸u̷s̵i̶o̸n̵ s̸y̷s̶t̸e̸m̶ c̴o̶m̷b̴i̵n̸i̸n̸g̸ t̴h̵e̴r̴m̷a̸l̶, I̴R̴, & E̵M d̵a̶t̴a̴.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- R̵e̴s̶e̴a̸r̵c̶h̸: Q̷u̴a̸n̸t̷u̶m̷ s̶e̵n̴s̷o̵r̵s̸ f̷o̵r̶ n̴a̴v̶i̶g̴a̷t̸i̵o̵n̷ a̸n̶d̸ d̴e̸t̸e̸c̷t̴i̸o̸n̵ w̵i̷t̷h̷o̶u̷t̸ a̴c̸t̴i̸v̶e̵ e̸m̸i̵s̷s̷i̶o̴n̸s̶.</motion.li>
-            </motion.ul>
             |INSP3CT| V
             <motion.button 
               className={styles.galleryButton}
@@ -436,7 +429,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('combat_cases')}
             >
-              D̸r̷o̴n̷e̷ C̴o̷m̴b̸a̸t̴ 
+              [{"|LIMITS|  <|>  ||>··  <|>  |NO-CONTACT|"}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- C̸a̵s̸e̷ 0̵1̵: A̶ "V̸i̷p̸e̵r̵ S̵t̵r̴i̸k̴e̶" l̶o̵i̴t̷e̷r̵i̷n̴g̸ m̶u̵n̷i̴t̸i̷o̴n̷ s̷u̶c̸c̸e̵s̶s̴f̴u̴l̶l̷y̷ ne̴utra̸li̵z̴ed a̸n e̷ne̴my c̴om̶ma̸nd ve̶hic̸le... id̸ent̸ify̸ing i̷t t̸hro̸ugh fo̴lia̸ge u̴sin̵g hy̴per̸spect̵ral im̷agi̶ng an̴d e̶xecu̶ting a t̸op-d̸own a̴ttac̷k.</motion.li>
@@ -606,10 +599,11 @@ PPPPPPPPPPPPPPPPPPPPPPPPP555555555555555555555PPPP5PGGP5P#BGPPP55555555555555555
                 margin: 0,
                 textShadow: '0 0 50px rgba(255, 255, 255, 0.8), 0 0 100px rgba(255, 255, 255, 0.5)'
               }}>
-                RQ-45//DSF
+                HEX-3//SC
               </h1>
             </motion.div>
           </motion.div>
+          <motion.button className={styles.galleryButton} style={{ margin: 'auto' }} variants={getItemVariants()} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}> \-/·\-/\-/·r̵͈̐̐͑͌̍̽̎́̓͗̾̎̚ë̷̢̢̗̳̙̞͙̼̺́̑͗̈́̀̀̊͊̎̿̃́̈́̕̚͜͜s̸̡̩͉̟̰̬͍̲̱̙͓̙̘̩͕͆͂t̴̪̑̽̾͆̊̊̋̌͐̀̃̂͘͜á̷̡̡̗̮͎͕͓͖̰̹̈́̓͋̊̄̕͝r̶͎̥̽͊̒̆̀̎̀͆̽͒t̷̯͍̜̃̒͠·\-/\-/·\-/</motion.button>
 
         </motion.div>
       </motion.div>

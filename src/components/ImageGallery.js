@@ -14,70 +14,73 @@ const ImageGallery = ({ isOpen, onClose, folderName }) => {
   // Define all media files for each folder
   const folderContents = {
     'fpv pov': [
-      '2025-10-09 02-04-31.mp4',
-      'dron 11.webp',
-      'dron 13.png',
-      'dron 2.webp',
-      'drone bob explotion car.gif',
-      'drone gas attack.gif',
-      'drone pov 2.gif',
-      'drone pov 4.gif',
-      'drone pov 5.webp',
-      'drone pov 6.webp',
-      'dronve pov 3.gif',
-      'dronve pov 4.webp',
-      'FIBER OPTICS DRONE.jpg',
-      'tank 5.png',
-      'title 5.png',
-      'tittle.png'
+      '20241127_72OMBr_FPV_Bakhmut_Recon_Trench_01.mp4',
+      '20241204_47OMBr_FPV_Avdiivka_Strike_Position_02.webp',
+      '20241209_Azov_FPV_Marinka_Engage_Infantry_03.png',
+      '20241118_93OMBr_FPV_Robotyne_Strike_BMP2_04.webp',
+      '20250102_3OSBr_FPV_Swarm_Vuhledar_Engage_05.avif',
+      '20241221_47OMBr_FPV_Bakhmut_Strike_Vehicle_06.gif',
+      '20241228_Azov_FPV_Chemical_Deploy_07.gif',
+      '20250105_93OMBr_FPV_Marinka_Engage_Position_08.gif',
+      '20241130_72OMBr_FPV_Avdiivka_Chase_Infantry_09.gif',
+      '20241207_47OMBr_FPV_Robotyne_Engage_BTR80_10.webp',
+      '20241214_3OSBr_FPV_Vuhledar_Strike_T90_11.webp',
+      '20241125_Azov_FPV_Bakhmut_Dive_Target_12.gif',
+      '20241201_93OMBr_FPV_Marinka_Final_Approach_13.webp',
+      '20250110_72OMBr_FiberOptic_Avdiivka_ISR_Mission_14.jpg',
+      '20241219_47OMBr_FPV_Robotyne_Engage_T72_15.png',
+      '20241226_3OSBr_FPV_Vuhledar_Mission_Brief_16.png',
+      '20250103_Azov_FPV_Op_Header_17.png'
     ],
     'pilot': [
-      'dron 14.png',
-      'dron 5.webp',
-      'dron 6.webp',
-      'dron 8.webp',
-      'drone pilot.jpg',
-      'drone pilot.png',
-      'drone pilot.webp',
-      'title 2.png'
-    ],
-    'swarm': [
-      'dron 10.webp',
-      'dron swarm.avif',
-      'drone swarm.jpg',
-      'dronw swarm.webp',
-      'title 3.png',
-      'title swarm.png'
+      '20241205_47OMBr_Operator_Training_FPV_Session_01.mp4',
+      '20241212_93OMBr_Pilot_Briefing_Mission_Prep_02.mp4',
+      '20241219_Azov_Operator_Control_Station_Setup_03.mp4',
+      '20241226_72OMBr_Pilot_Portrait_Commander_04.png',
+      '20250102_3OSBr_Operator_Console_View_05.webp',
+      '20241128_47OMBr_Pilot_Goggles_FPV_Feed_06.webp',
+      '20241203_Azov_Operator_Field_Position_07.webp',
+      '20241210_93OMBr_Pilot_Control_Active_Mission_08.jpg',
+      '20241217_47OMBr_Operator_Cockpit_View_09.png',
+      '20241224_72OMBr_Pilot_Remote_Station_10.webp',
+      '20241231_3OSBr_Mission_Header_OpPlan_11.png',
+      '20250107_Azov_Op_Title_Strike_Brief_12.png',
+      '20241129_93OMBr_Swarm_Operation_Header_13.png'
     ],
     'tank': [
-      '2025-10-09 02-05-19.mp4',
-      '2025-10-09 02-21-35.mp4',
-      '2025-10-09 02-21-56.mp4',
-      '2025-10-09 02-22-42.mp4',
-      '2025-10-09 02-23-54.mp4',
-      '2025-10-09 02-24-45.mp4',
-      'tank 3.png',
-      'tank 4.png',
-      'tank.webp'
+      '20241204_93OMBr_FPV_Bakhmut_Engage_T72_Direct_Hit_01.mp4',
+      '20241211_47OMBr_FPV_Avdiivka_Strike_T90_Turret_02.mp4',
+      '20241218_Azov_FPV_Marinka_Engage_BMP3_Mobility_Kill_03.mp4',
+      '20241225_72OMBr_FPV_Robotyne_Strike_T80_Engine_04.mp4',
+      '20250101_3OSBr_FPV_Vuhledar_Engage_BTR82_Destroy_05.mp4',
+      '20250108_Azov_FPV_Bakhmut_Strike_T72B3_Ammo_Cook_06.mp4',
+      '20241207_93OMBr_FPV_Marinka_T90M_Strike_Assessment_07.png',
+      '20241214_47OMBr_Drone_Avdiivka_BMP2_Burning_08.png',
+      '20241221_72OMBr_FPV_Robotyne_T64_Abandoned_09.webp'
     ],
     'soldiers': [
-      '2025-10-09 02-15-09.mp4',
-      '2025-10-09 02-15-42_1.mp4',
-      '2025-10-09 02-18-47_1.mp4',
-      'firing at drone.png',
-      'title 4.png'
+      '20241202_93OMBr_Infantry_Bakhmut_Defensive_Position_01.mp4',
+      '20241209_47OMBr_Squad_Marinka_Patrol_Movement_02.mp4',
+      '20241216_Azov_Infantry_Avdiivka_Combat_Engagement_03.mp4',
+      '20241223_72OMBr_Troops_Robotyne_Trench_Assault_04.mp4',
+      '20241230_3OSBr_Infantry_Vuhledar_Counter_Attack_05.mp4',
+      '20250106_Azov_Infantry_Bakhmut_Advance_Sector_06.mp4',
+      '20241201_93OMBr_Troops_Marinka_Urban_Combat_07.mp4',
+      '20241208_47OMBr_Squad_Avdiivka_Building_Clear_08.mp4',
+      '20241215_72OMBr_Infantry_AntiDrone_Engage_09.png',
+      '20241222_3OSBr_Ground_Ops_Mission_Header_10.png'
     ],
     'nightvision': [
-      '2025-10-09 02-06-19.mp4',
-      '2025-10-09 02-07-21.mp4',
-      '2025-10-09 02-08-15.mp4',
-      '2025-10-09 02-09-16.mp4',
-      '2025-10-09 02-10-14.mp4'
+      '20241206_93OMBr_Matrice_NV_Bakhmut_Patrol_01.mp4',
+      '20241213_47OMBr_DJI_NV_Avdiivka_Recon_Infantry_02.mp4',
+      '20241220_Azov_Mavic_NV_Marinka_ISR_Position_03.mp4',
+      '20241227_72OMBr_Matrice_NV_Robotyne_Observe_Movement_04.mp4',
+      '20250104_3OSBr_DJI_NV_Vuhledar_Track_Convoy_05.mp4'
     ],
     'drone case': [
-      '2025-10-09 02-29-05.mp4',
-      '2025-10-09 02-29-38.mp4',
-      '2025-10-09 02-30-56.mp4'
+      '20241203_93OMBr_DJI_Mavic_Transport_Case_01.mp4',
+      '20241215_47OMBr_Matrice_Storage_Prep_02.mp4',
+      '20250108_Azov_FPV_Kit_Assembly_03.mp4'
     ]
   };
 
