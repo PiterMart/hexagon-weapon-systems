@@ -12,7 +12,7 @@ export default function AutoRefresh() {
   const buttonTexts = [
     `/ᐠ      ᐟ\\\nദ്ദി •ˉ͈̀ ꒳ ˉ͈́ )`,
     `૮ ․ ․ ྀིა`,
-    `ᶻ 𝗓 𐰁`
+    `A̵̦̻͇͕̣͎͎̋͆̽͐͆̓̈́̌̚͠͝ľ̸̡̪̼̫̝͚̱̜̞̬̬̠̤͓̊̎͂̌͜7̶̨̭̼̪̣͈̝͔̜̮͇̟̝̎̑̈́̓͝0̷̧̡̲̟̘̭̲̝͉͎̝̦̐̅͐!̸̬̘̤͓̃̊̆̈́͑̚!̸̨͍̺͇̫̩̪͍̼͗͑́̒͆͠!̴͈͖͖͙̪͇̈́͋̒͊̋̉̃̒̕͜𐰁`
   ];
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function AutoRefresh() {
       // Show popup
       setShowPopup(true);
       setShowFlash(false);
-    }, 60000); // 1 minute
+    }, 120000); // 2 minutes
 
     // Cleanup interval on component unmount
     return () => {
@@ -52,12 +52,12 @@ export default function AutoRefresh() {
       )}
       <div className={styles.popup}>
         <div className={styles.content}>
-          <h2 className={styles.title}>⠀⠀⠀⣂⣠⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⢀⡀⡆⠀⠀⠀⠀
+          <h2 className={styles.title}>R A D I O INTERFERENCE •DETECTED•</h2>
+          <p style={{maxWidth: '500px', margin: 'auto'}}>⠀⠀⠀⣂⣠⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⢀⡀⡆⠀⠀⠀⠀
 ⠀⠀⠀⣿⣿⠀⠀⣀⠀⢣⣄⣶⣶⡿⠁⠀⠀⠀⠈⡇⣇⡠⢀⠀⠀
 ⢚⣺⠟⣿⣿⣿⠿⠶⠀⢒⣿⣿⣮⡟⠛⠀⠽⠻⠿⡿⡾⠓⠫⠆⠁
 ⠀⠀⠀⢹⡟⠀⠀⠀⣠⠟⠋⠿⠙⣿⣶⡤⠀⠀⠀⢸⠳⠄⠀⠀⠀
-⠀⠀⠀⢸⠁⠀⠀⠀⠁⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀⠈⡆⠀⠀⠀⠀ RADIO INTERFERENCE DETECTED</h2>
-          <p className={styles.message}>vvvvvvvvvv..v.v..v..vv......v.</p>
+⠀⠀⠀⢸⠁⠀⠀⠀⠁⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀⠈⡆⠀⠀⠀⠀ </p>
           <div className={styles.buttonContainer}>
             <button 
               className={styles.sequenceButton}
@@ -76,7 +76,7 @@ export default function AutoRefresh() {
               className={styles.sequenceButton}
               onClick={() => handleButtonClick(2)}
             >
-              ᶻ 𝗓 𐰁
+              A̵̦̻͇͕̣͎͎̋͆̽͐͆̓̈́̌̚͠͝ľ̸̡̪̼̫̝͚̱̜̞̬̬̠̤͓̊̎͂̌͜7̶̨̭̼̪̣͈̝͔̜̮͇̟̝̎̑̈́̓͝0̷̧̡̲̟̘̭̲̝͉͎̝̦̐̅͐!̸̬̘̤͓̃̊̆̈́͑̚!̸̨͍̺͇̫̩̪͍̼͗͑́̒͆͠!̴͈͖͖͙̪͇̈́͋̒͊̋̉̃̒̕͜
             </button>
           </div>
         </div>

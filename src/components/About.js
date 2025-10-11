@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import styles from '../styles/About.module.css';
 import ImageGallery from './ImageGallery';
+import DroneAnimation from './DroneAnimation';
 
 // Wave text component for cryptic text
 const WaveText = ({ text, className }) => {
@@ -75,8 +76,8 @@ const About = () => {
   const folderMapping = {
     'drones': 'fpv pov',
     'pilots': 'pilot',
-    'tanks_vs_drones': 'tank',
-    'anti_drone_strategies': 'soldiers',
+    'tanks_vs_drones': 'soldiers',
+    'anti_drone_strategies': 'tank',
     'nightvision': 'nightvision',
     'combat_cases': 'drone case'
   };
@@ -116,7 +117,7 @@ const About = () => {
   });
 
   return (
-    <div className={styles.aboutContainer} style={{ marginTop: '15rem' }}>
+    <div className={styles.aboutContainer} style={{ paddingTop: '15rem' }}>
       <motion.div 
         className={styles.contentWrapper}
         initial="hidden"
@@ -140,7 +141,7 @@ const About = () => {
         </motion.div>
         <motion.div variants={getItemVariants()}>
           <marquee className={styles.marquee} behavior="scroll" direction="left" scrollamount="8">
-            <h1 className={styles.title}>H̴E̸X̷A̧G͏O͏N̷ 𝔚EA̴P̵O̷N̸ ̲S͘YSTEMS</h1>
+            <h1 className={styles.title} style={{fontSize: '5rem'}}>H̴E̸X̷A̧G͏O͏N̷ 𝔚EA̴P̵O̷N̸ ̲S͘YSTEMS</h1>
           </marquee>
         </motion.div>
         <motion.h2 className={styles.subtitle} variants={getItemVariants()}>U̴nm̷a̸n̴n̶e̵d A̴e̷r̴i̴a̷l̵ ₩₳Ɽ₣₳ⱤɆ D̴i̷v̶i̵s̵i̸o̴n̵</motion.h2>
@@ -158,7 +159,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('drones')}
             >
-             [{"(·) + (·) + (·)  ∴ "}]
+             [{"|Void Sector|  >>  Map  [ >|<X>|< ]"}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- UCAV "S̴p̷e̶c̸t̴r̴e̷-9": A̸t̴t̸a̸c̷k̸ and r̴e̸c̴o̴n̸...a̴i̶s̴s̷a̸n̸c̷e̶ p̴l̷a̸t̴f̸o̵r̴m̸.</motion.li>
@@ -176,7 +177,7 @@ const About = () => {
               A ✛ ... 
             </motion.button>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
-              <motion.li className={styles.crypticText} variants={getItemVariants()}>
+              <motion.li className={styles.crypticText}                  style={{maxWidth: "500px"}} variants={getItemVariants()}>
                 <WaveText 
                   text="̴T̵h̸e̷ ̷w̵h̵i̸s̶p̵e̸r̸ ̷o̴f̴ ̸s̸t̵e̷e̴l̷ ̵w̷i̴n̸g̸s̸.̸ ̶A̵ ̵s̵i̵l̷e̸n̸t̵ ̷s̸c̸r̵e̴a̴m̸ ̵i̴n̸ ̸t̵h̷e̵ ̴u̸n̷s̷e̸e̴n̴.̸ ̸N̵o̷ ̸f̶e̸a̴r̴,̸ ̸n̸o̷ ̸p̸a̵i̷n̴,̵ ̷j̸u̴s̷t̵ ̸c̸a̸l̷c̷u̵l̷a̷t̴i̵o̸n̵s̵ ̸i̷n̸ ̸t̸h̸e̴ ̷v̴o̸i̸d̴.̵ ̶E̸c̷h̷o̷e̵s̴ ̷o̸f̷ ̷a̵ ̷l̷o̴s̷t̵ ̷s̴k̵y̴,̸ ̸t̵h̵e̷ ̴h̵u̸m̷ ̵o̷f̷ ̷f̵a̴t̸e̸ ̴u̸n̷f̵u̸r̵l̴i̴n̸g̸.̵ ̷A̴ ̷d̵i̸g̷i̴t̴a̸l̴ ̷h̵e̷a̴r̵t̷b̵e̷a̸t̷ ̵t̵h̴r̵o̸u̶g̷h̸ ̷t̴h̵e̴ ̷f̸r̵a̷c̴t̶u̴r̷e̷d̷ ̵a̸i̴r̶,̵ ̷s̸h̷a̵t̸t̵e̵r̷e̶d̵ ̷i̶m̶a̶g̶e̸s̵ ̷o̸f̴ ̸w̷h̸a̸t̵ ̸w̸a̶s̵.̵ ̴I̷c̶e̵ ̷i̸n̵ ̷t̴h̵e̵ ̸v̶e̵i̸n̵s̸,̸ ̷e̷l̸e̷c̴t̸r̴o̴n̸s̴ ̷d̷a̸n̶c̴i̷n̵g̴ ̷t̷o̵ ̷a̵ ̵w̵a̴r̴ ̴d̸r̷u̵m̵.̵ ̶C̵o̸l̷d̷ ̵l̵o̸g̶i̶c̷ ̸e̸a̸t̴i̴n̸g̸ ̸t̵h̵e̴ ̷s̸o̷u̴l̵s̴ ̵o̴f̴ ̷t̴h̷e̷ ̵g̵h̸o̸s̷t̸s̷ ̵t̵h̴e̶y̴ ̷c̸h̵a̷s̴e̴.̸ ̸N̸o̵t̴h̵i̸n̶g̸ ̷t̸o̸ ̴f̸e̴e̷l̴ ̴b̵u̴t̴ ̸t̷h̷e̷ ̴w̴e̵i̶g̶h̶t̷ ̷o̸f̷ ̷t̷h̷e̴ ̵n̵e̴x̸t̵ ̷c̷o̵m̸m̸a̸n̵d̴.̵ ̴A̷ ̴b̵r̴o̷k̵e̷n̴ ̸s̷o̵n̴g̸ ̵o̵f̵ ̷p̵o̸w̴e̶r̴ ̷i̸n̴ ̸t̵h̸e̷ ̷c̸o̴d̴e̵.̵"
                 />
@@ -187,21 +188,24 @@ const About = () => {
           <motion.div 
             className={styles.divisionContainer}
             variants={getItemVariants()}
+            style={{marginTop: '5rem'}}
           >
             <motion.h3 
               className={styles.divisionTitle} 
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('pilots')}
             >
-             [{"|Void Sector|  >>  Map  [ >|<X>|< ]"}]
+             [{"Ojos de la maleza inquietos."}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Tr̴ai̸ni̷ng: Ce̴rti̸fi̵ed UCAV Op̴er̵ato̵r C̴ou̸rse.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- S̵i̴m̶u̶l̴a̵t̸i̸o̶n̷: "W̷a̴r̶S̷i̸m̴" v̵i̶r̵t̴u̶a̵l̶ r̸e̴a̷l̶i̸t̵y̴ en̴vi̸ronm̵en̸t fo̸r j̴oi̵nt f̴orc̷es t̴rai̴nin̸g.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- In̴t̷e̷r̵f̸a̷c̶e̵: B̸r̵a̵i̸n̵-̸C̸o̸m̵p̶u̷t̷e̴r̷ I̷n̶t̵e̵r̸f̸a̴c̵e̸ (B̵C̸I̸) f̷o̶r̶ a̶d̸v̵a̷n̶c̴e̴d̶ d̴r̴o̷n̸e̷ c̸o̸n̷t̴r̶o̷l̶.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- C2 Sof̴twa̸re: "AURA" A̴I-p̴ower̸ed c̸omman̵d a̷nd c̴ontr̸ol f̷or b̵attl̸efie̴ld m̴anag̸emen̷t.</motion.li>
+              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Adentrandose guerreros, pisando charcos
+              negros de barro</motion.li>
+              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- y el cielo esconde una muerte que llega zumbando entre las nubes mas lejanas.</motion.li>
+              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- El olor del pasto remojado, en mis guantes condensado, frio.</motion.li>
+              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- No queda mas aliento. Misiones encryptadas en el sello divino de tu favor traicionero.</motion.li>
             </motion.ul>
-            |INSP3CT| V
+            <div style={{marginTop: "3rem"}}>
+              <p>            |INSP3CT| V</p>
             <motion.button 
               className={styles.galleryButton}
               variants={getItemVariants()}
@@ -209,8 +213,11 @@ const About = () => {
             >
               ;;;✠-32 + ✠ ✠ 
             </motion.button>
+
+            </div>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.crypticText} variants={getItemVariants()}>
+             <span style={{fontSize: '3rem'}}> Mi cielo no te pierdas. Te protejo con mi vida.</span>
               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⣶⣶⣴⣦⣄⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠿⣿⣿⣿⣿⣿⣿⣷⣀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀
@@ -260,19 +267,22 @@ const About = () => {
               Maullidos acartonados en los escombros.
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Ac̸ti̵ve D̵efe̷nse: "A̵eg̵is" a̴uto̷ma̴ted tu̷rre̷t wi̵th f̴rag̸ment̵atio̷n m̴uni̸tio̵ns for̸ dr̸one i̸nte̴rcep̵tion.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- El̷ect̵ron̶ic Wa̸rfa̴re: Veh̴ic̵le-mo̸unt̶ed ja̸mme̷rs a̵nd s̴poof̵ers.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- In̴tegr̵ati̸on: P̷air̵ing a̶rmo̷red v̵ehi̸cles w̸ith t̵hei̷r o̵wn "h̴unt̷er-k̷iller" d̸ron̵e esc̷orts.</motion.li>
-              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Re̷se̸ar̷ch: Ca̴mo̴ufl̸age ma̵te̵ria̸ls t̸o r̵edu̸ce t̷herm̸al a̴nd e̴lect̸roni̵c s̷igna̴tur̴es.</motion.li>
+              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Bigotes empolvados. Tu carita, dimension de lo sagrado, tus garritas.</motion.li>
+              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- A tus ojos solo soy una sombra cada vez mas cerca del abismo..</motion.li>
+              <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Falsificando la noche de azul, no hay colores en la guerra. </motion.li>
             </motion.ul>
-            |INSP3CT| V
-            <motion.button 
+            <div style={{marginTop: "3rem"}}>
+              <p>
+              |INSP3CT| V
+              </p>
+              <motion.button 
               className={styles.galleryButton}
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('tanks_vs_drones')}
             >
               F.-^^^^/--___ A.33
             </motion.button>
+            </div>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.crypticText} variants={getItemVariants()}>
                 <WaveText 
@@ -291,7 +301,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('anti_drone_strategies')}
             >
-              [{"∇-·-∇ |=<|>| -/·-/ <|> ||··"}]
+              [{"∇-·-∇ |=<|>| ··No hay ni un estandarte desgarrado por el viento. Solo vigilancia, asaltar al enemigo infinitas veces."}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- Ma̶n-P̵ort̴abl̶e: "H̵ELIO̴S II" h̵and̴hel̴d d̴irect̵ed en̸ergy w̸eap̴on (l̷as̵er).</motion.li>
@@ -429,7 +439,7 @@ const About = () => {
               variants={getItemVariants()}
               onClick={() => handleDivisionClick('combat_cases')}
             >
-              [{"|LIMITS|  <|>  ||>··  <|>  |NO-CONTACT|"}]
+              [{"|Ronroneo del techo y de la tierra.  |  <|>  ||>··  <|>  |Unidos en la espera de un mejor momento.|"}]
             </motion.h3>
             <motion.ul className={styles.divisionList} variants={getContainerVariants()}>
               <motion.li className={styles.serviceItem} variants={getItemVariants()}>- C̸a̵s̸e̷ 0̵1̵: A̶ "V̸i̷p̸e̵r̵ S̵t̵r̴i̸k̴e̶" l̶o̵i̴t̷e̷r̵i̷n̴g̸ m̶u̵n̷i̴t̸i̷o̴n̷ s̷u̶c̸c̸e̵s̶s̴f̴u̴l̶l̷y̷ ne̴utra̸li̵z̴ed a̸n e̷ne̴my c̴om̶ma̸nd ve̶hic̸le... id̸ent̸ify̸ing i̷t t̸hro̸ugh fo̴lia̸ge u̴sin̵g hy̴per̸spect̵ral im̷agi̶ng an̴d e̶xecu̶ting a t̸op-d̸own a̴ttac̷k.</motion.li>
@@ -450,14 +460,8 @@ const About = () => {
             variants={getItemVariants()}
             style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}
           >
-            <motion.div variants={getItemVariants()}>
-              <Image
-                src="/image/dron pic 1.png"
-                alt="Drone Combat Display"
-                width={800}
-                height={500}
-                style={{ objectFit: 'contain' }}
-              />
+            <motion.div variants={getItemVariants()} style={{ width: '100%' }}>
+              <DroneAnimation />
             </motion.div>
           </motion.div>
 

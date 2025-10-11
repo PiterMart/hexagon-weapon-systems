@@ -22,7 +22,7 @@
 }
 
 .popup {
-  background: rgba(0, 0, 0, 0.438);
+  background: rgb(0, 0, 0);
   padding: 1rem;
   max-width: 500px;
   text-align: center;
@@ -48,7 +48,7 @@
 
 .title {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;

@@ -116,6 +116,19 @@ export default function DroneAnimation() {
 
   return (
     <div ref={containerRef} className={styles.container}>
+      {/* Drone Specifications */}
+      <div className={styles.specs}>
+        <div className={styles.specsTitle}>"Nyx Stalker A-7 MK.IV" FPV War Drone</div>
+        <div className={styles.specsItem}>Frame: Monocoque T300 Carbon Fiber Chassis with 6mm Arms</div>
+        <div className={styles.specsItem}>Motors: 2507 1500kV High-Torque Motors</div>
+        <div className={styles.specsItem}>Propellers: 7-Inch Bi-Blade Reinforced Polymer Propellers</div>
+        <div className={styles.specsItem}>Flight Control Stack: H7 Processor Flight Controller with Redundant Gyros & High-Current ESC</div>
+        <div className={styles.specsItem}>FPV System: 1.3 GHz Long-Range Analog Video Transmission</div>
+        <div className={styles.specsItem}>Antennas: High-Gain Directional Antennas (Cross-Polarized)</div>
+        <div className={styles.specsItem}>Radio Control Link: 915MHz Encrypted Long-Range Control Link</div>
+        <div className={styles.specsItem}>Battery: 6S 3,300mAh Li-Ion High-Energy-Density Pack</div>
+      </div>
+
       <div className={styles.animationWrapper}>
         {!imagesLoaded && (
           <div className={styles.loading}>

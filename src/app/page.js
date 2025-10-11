@@ -80,12 +80,13 @@ export default function Home() {
         {/* <InteractiveObjectScene/> */}
         <CurvedScrollingText/>
         <ScrollProgressRuler/>
-        <DroneAnimation/>
+        {/* <div style={{marginBottom: '-25REM'}}><DroneAnimation/></div> */}
         <Video/>
         <Hexagon/>
         {/* <Portfolio/> */}
         {/* <div style={{height: '100vh', background: 'black'}}></div> */}
         <WorldClock/>
+        {/* <div style={{height: '100vh', background: 'black'}}></div> */}
         <About/>
       </main>
     </div>

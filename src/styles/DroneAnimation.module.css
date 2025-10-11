@@ -1,23 +1,43 @@
 .container {
-    position: fixed;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #00000000;
-  position: relative;
   overflow: hidden;
   padding: 0;
   border: 1px solid #808080;
 }
 
+.specs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  font-size: 12px;
+  font-family: 'VCR_OSD_MONO', monospace;
+  color: #808080;
+  padding: 10px;
+  line-height: 1.4;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.specsTitle {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.specsItem {
+  margin-bottom: 3px;
+}
+
 .animationWrapper {
-    z-index: 1000;
-    position: fixed;
-    max-width: 600px;
+  z-index: 1000;
+  position: relative;
   width: 100%;
-  bottom: 2rem;
-  left: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

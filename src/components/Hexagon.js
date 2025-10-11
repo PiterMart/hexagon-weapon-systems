@@ -12,12 +12,26 @@ const Hexagon = () => {
   const svgRef = useRef(null);
   const [hoveredText, setHoveredText] = useState({ name: "", description: "" }); // Track hovered text
   const [displayedText, setDisplayedText] = useState(""); // For typewriter effect
+  const [showFlash, setShowFlash] = useState(false); // Flash animation state
+  const [flashText, setFlashText] = useState(''); // Flash text content
   const rotationSpeed = 0.0007;
   const width = 500, height = 500;
   const radius = 150;
   const pointRadius = 35; // Clickable circle radius
   const center = { x: width / 2, y: height / 2 };
   
+
+  // Handle click on hexagon points
+  const handlePointClick = (point) => {
+    // Set the flash text to the specific text
+    setFlashText('A̵̦̻͇͕̣͎͎̋͆̽͐͆̓̈́̌̚͠͝ľ̸̡̪̼̫̝͚̱̜̞̬̬̠̤͓̊̎͂̌͜7̶̨̭̼̪̣͈̝͔̜̮͇̟̝̎̑̈́̓͝0̷̧̡̲̟̘̭̲̝͉͎̝̦̐̅͐!̸̬̘̤͓̃̊̆̈́͑̚!̸̨͍̺͇̫̩̪͍̼͗͑́̒͆͠!̴͈͖͖͙̪͇̈́͋̒͊̋̉̃̒̕͜');
+    setShowFlash(true);
+
+    // After animation, hide everything
+    setTimeout(() => {
+      setShowFlash(false);
+    }, 1000); // 1 second flash duration
+  };
 
   // Typewriter effect
   useEffect(() => {
@@ -145,6 +159,10 @@ const Hexagon = () => {
 
         // Clear hovered text
         setHoveredText({ name: "", description: "" });
+      })
+      .on("click", function (event, d) {
+        // Trigger flash animation on click
+        handlePointClick(d);
       });
 
     // Update function to animate rotation
@@ -170,6 +188,36 @@ const Hexagon = () => {
 
   return (
     <div style={{ position: "relative", textAlign: "center", height: '100vh' }}>
+      {/* Flash Overlay */}
+      {showFlash && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 10001,
+          pointerEvents: 'none',
+          animation: 'flashFade 1s ease-in-out'
+        }}>
+          <div style={{
+            fontSize: '20rem',
+            color: '#ffffff',
+            textAlign: 'center',
+            whiteSpace: 'pre-line',
+            fontFamily: "'Doto', sans-serif",
+            fontWeight: 'bold',
+            textShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4)',
+            animation: 'flashPulse 1s ease-in-out'
+          }}>
+            {flashText}
+          </div>
+        </div>
+      )}
+
       {/* Textbox above the hexagon */}
       <div
         style={{
@@ -198,6 +246,33 @@ const Hexagon = () => {
 
       {/* Hexagon SVG */}
       <svg ref={svgRef} width={width} height={height} style={{ display: "block", margin: "auto" , height: '150vh'}} />
+      
+      {/* CSS animations */}
+      <style jsx>{`
+        @keyframes flashFade {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.2);
+          }
+        }
+        
+        @keyframes flashPulse {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   );
 };
