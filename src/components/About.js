@@ -54,7 +54,19 @@ const About = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [currentFolder, setCurrentFolder] = useState(null);
   const [scrollDirection, setScrollDirection] = useState('down');
+  const [isMobile, setIsMobile] = useState(false);
   const lastScrollY = useRef(0);
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Track scroll direction
   useEffect(() => {
@@ -116,13 +128,19 @@ const About = () => {
     }
   });
 
+  // Responsive viewport settings for mobile
+  // On mobile, use more forgiving settings to ensure content is visible
+  const viewportSettings = isMobile 
+    ? { once: true, margin: "0px", amount: 0.1 }
+    : { once: false, margin: "-100px", amount: 0.1 };
+
   return (
     <div className={styles.aboutContainer} style={{ paddingTop: '15rem' }}>
       <motion.div 
         className={styles.contentWrapper}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, margin: "-100px", amount: 0.1 }}
+        viewport={viewportSettings}
         variants={getContainerVariants()}
       >
         <motion.div className={styles.logoContainer} variants={getItemVariants()}>
