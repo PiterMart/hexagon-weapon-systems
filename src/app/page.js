@@ -70,6 +70,8 @@ export default function Home() {
    &J            ^@!  ~@^             .!PP7.    ~PG?:   .PG~^~~~~~~~~^~BP.  :~:^^:~::!.7^^!^7::~^   
    P7            :B~  ^BYJJJJJJJJJY! ^55~         ^YP! .5Y             .55. :~:^^:~::!:7  .^J::~^ : 
                          ..........  .               .                        ..   ..      .^ .  
+    
+    developed by Zyntax, Pedro martingaste and https://www.instagram.com/zyntax_xx/
     `);
   }, []);
 

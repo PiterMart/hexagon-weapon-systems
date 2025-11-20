@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Hexagon Developments",
-  description: "Technology & Design",
+  title: "Hexagon Weapon Ststems",
+  description: "Warfare, Technology & Design",
 };
 
 export default function RootLayout({ children }) {
